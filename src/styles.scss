@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// BUTTONS
+@layer components {
+  .button-base {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-align: center;
+    min-width: 7rem;
+  }
+  .button-1 {
+    @extend .button-base;
+    background-color: theme("colors.white");
+  }
+  .button-2 {
+    @extend .button-base;
+    background-color: theme("colors.transparent");
+    border: 1px solid theme("colors.white");
+    color: theme("colors.white");
+  }
+}
